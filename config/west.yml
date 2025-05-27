@@ -20,4 +20,4 @@ manifest:
       revision: main
       import: app/west.yml
   self:
-    path: config
+    path: boards
