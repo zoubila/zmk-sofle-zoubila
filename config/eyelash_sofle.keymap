@@ -33,7 +33,7 @@
     behaviors {
             morph_N1: morph_N1 {
                 compatible = "zmk,behavior-mod-morph";
-                bindings = <&kp EXCLAM>,<&kp N1>;
+                bindings = <&kp EXCLAM &kp N1>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
     };
