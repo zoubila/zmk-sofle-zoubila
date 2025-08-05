@@ -41,7 +41,7 @@
         modmorph_exclam_1: mod_morph {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp EXCLAM &kp N1>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT MOD_RSFT)>;
         };
     };
 
