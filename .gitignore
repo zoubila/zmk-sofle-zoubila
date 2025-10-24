@@ -4,3 +4,4 @@ modules/
 tools/
 .west/
 .idea/
+.DS_Store
