@@ -38,6 +38,7 @@
     };
 
     behaviors {
+        /* --- Touche semi-colon / colon --- */
         semi_inv: mod_morph_semi_inv {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMI_INV";
@@ -45,6 +46,57 @@
             /* défaut = ":" ; si Shift actif => ";" */
             bindings = <&kp COLON>, <&kp SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        /* --- Accents pour 'a' --- */
+        a_grave: a_grave {
+            compatible = "zmk,behavior-macro";
+            label = "A_GRAVE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE) &kp A>;
+        };
+        a_circ: a_circ {
+            compatible = "zmk,behavior-macro";
+            label = "A_CIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(I) &kp A>;
+        };
+        a_acute: a_acute {
+            compatible = "zmk,behavior-macro";
+            label = "A_ACUTE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp A>;
+        };
+        a_dia: a_dia {
+            compatible = "zmk,behavior-macro";
+            label = "A_DIA";
+            #binding-cells = <0>;
+            bindings = <&kp LA(U) &kp A>;
+        };
+
+        /* --- Accents pour 'e' --- */
+        e_grave: e_grave {
+            compatible = "zmk,behavior-macro";
+            label = "E_GRAVE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE) &kp E>;
+        };
+        e_circ: e_circ {
+            compatible = "zmk,behavior-macro";
+            label = "E_CIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(I) &kp E>;
+        };
+        e_acute: e_acute {
+            compatible = "zmk,behavior-macro";
+            label = "E_ACUTE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp E>;
+        };
+        e_dia: e_dia {
+            compatible = "zmk,behavior-macro";
+            label = "E_DIA";
+            #binding-cells = <0>;
+            bindings = <&kp LA(U) &kp E>;
         };
     };
 
@@ -54,7 +106,7 @@
         layer0 {
             bindings = <
 &kp ESC     &kp N1     &kp N2        &kp N3        &kp N4      &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8           &kp N9           &kp N0               &kp BACKSPACE
-&kp TAB     &kp A      &kp Z         &kp E         &kp R       &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I            &kp O            &kp P                &kp EQUAL
+&kp TAB     &lt 4 A    &kp Z         &lt 5 E       &kp R       &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I            &kp O            &kp P                &kp EQUAL
 &kp CAPS    &kp Q      &kp S         &kp D         &kp F       &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K            &kp L            &kp M                &kp MINUS
 &kp LSHFT   &kp W      &kp X         &kp C         &kp V       &kp B        &kp RIGHT_ARROW  &kp N      &kp SLASH  &semi_inv        &kp LEFT_BRACKET &kp RIGHT_BRACKET    &kp PERIOD
 &kp C_MUTE  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE   &mo 1        &trans           &kp ENTER  &kp SPACE  &mo 2            &kp APOS         &kp PRINTSCREEN
@@ -97,6 +149,29 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
+        };
+        /* Layer 10 : accents de 'a' */
+        acc_a {
+            bindings = <
+&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &a_grave &a_circ &a_acute &a_dia &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans
+            >;
+            display-name = "ACC_A";
+        };
+
+        /* Layer 11 : accents de 'e' */
+        acc_e {
+            bindings = <
+&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &e_grave &e_circ &e_acute &e_dia &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans
+            >;
+            display-name = "ACC_E";
         };
     };
 };
