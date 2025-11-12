@@ -52,8 +52,7 @@
             compatible = "zmk,behavior-macro";
             label = "A_GRAVE";
             #binding-cells = <0>;
-            /* à */
-            bindings = <&text "\xC3\xA0">;
+            bindings = <&kp LA(GRAVE)>, <&kp A>;
         };
         a_circ: a_circ {
             compatible = "zmk,behavior-macro";
@@ -79,8 +78,7 @@
             compatible = "zmk,behavior-macro";
             label = "E_GRAVE";
             #binding-cells = <0>;
-            /* è */
-            bindings = <&text "\xC3\xA8">;
+            bindings = <&kp LA(GRAVE)>, <&kp E>;
         };
         e_circ: e_circ {
             compatible = "zmk,behavior-macro";
@@ -155,11 +153,11 @@
         /* Layer 10 : accents de 'a' */
         acc_a {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans   &a_grave &a_circ &a_acute &a_dia &trans &trans
-&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans &trans
-&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans &trans
-&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &text "\xC3\xA0" &a_circ &a_acute &a_dia &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans
             >;
             display-name = "ACC_A";
         };
@@ -167,11 +165,11 @@
         /* Layer 11 : accents de 'e' */
         acc_e {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans   &e_grave &e_circ &e_acute &e_dia &trans &trans
-&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans &trans
-&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans &trans
-&trans &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans  &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &text "\xC3\xA8" &e_circ &e_acute &e_dia &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans
             >;
             display-name = "ACC_E";
         };
