@@ -281,7 +281,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&a_grave'
+  - '&text "\xC3\xA0"'
   - '&a_circ'
   - '&a_acute'
   - '&a_dia'
@@ -346,7 +346,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&e_grave'
+  - '&text "\xC3\xA8"'
   - '&e_circ'
   - '&e_acute'
   - '&e_dia'

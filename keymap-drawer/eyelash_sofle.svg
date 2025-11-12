@@ -1772,7 +1772,9 @@ rect.held, rect.combo.held {
 <g transform="translate(616, 91)" class="key keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 75%">&amp;a_grave</tspan></text>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em">&amp;text</tspan><tspan x="0" dy="1.2em">&quot;\xC3\</tspan><tspan x="0" dy="1.2em">xA0&quot;</tspan>
+</text>
 </g>
 <g transform="translate(672, 91)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -2096,7 +2098,9 @@ rect.held, rect.combo.held {
 <g transform="translate(616, 91)" class="key keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 75%">&amp;e_grave</tspan></text>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em">&amp;text</tspan><tspan x="0" dy="1.2em">&quot;\xC3\</tspan><tspan x="0" dy="1.2em">xA8&quot;</tspan>
+</text>
 </g>
 <g transform="translate(672, 91)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
