@@ -154,7 +154,7 @@
         acc_a {
             bindings = <
 &trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans   &text "\xC3\xA0" &a_circ &a_acute &a_dia &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &text "à" &a_circ &a_acute &a_dia &trans &trans
 &trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans &trans
 &trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans &trans
 &trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans
@@ -166,7 +166,7 @@
         acc_e {
             bindings = <
 &trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans   &text "\xC3\xA8" &e_circ &e_acute &e_dia &trans &trans
+&trans &trans &trans &trans &trans &trans &trans   &text "è" &e_circ &e_acute &e_dia &trans &trans
 &trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans &trans
 &trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans &trans
 &trans &trans &trans &trans &trans &trans &trans   &trans    &trans &trans &trans  &trans
