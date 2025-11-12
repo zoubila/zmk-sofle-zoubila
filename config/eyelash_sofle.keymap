@@ -52,7 +52,7 @@
             compatible = "zmk,behavior-macro";
             label = "A_GRAVE";
             #binding-cells = <0>;
-            bindings = &text "à";
+            bindings = &text "\xC3\xA0";
         };
         a_circ: a_circ {
             compatible = "zmk,behavior-macro";
@@ -78,7 +78,7 @@
             compatible = "zmk,behavior-macro";
             label = "E_GRAVE";
             #binding-cells = <0>;
-            bindings = &text "è";
+            bindings = &text "\xC3\xA8";
         };
         e_circ: e_circ {
             compatible = "zmk,behavior-macro";
