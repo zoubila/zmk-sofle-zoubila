@@ -29,6 +29,12 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
       VERBATIM
     )
 
+    set_source_files_properties(
+      ${NICE_VIEW_CUSTOM_ART_C}
+      ${NICE_VIEW_CUSTOM_ART_H}
+      PROPERTIES GENERATED TRUE
+    )
+
     zephyr_library_include_directories(${CMAKE_CURRENT_BINARY_DIR})
     zephyr_library_sources(${NICE_VIEW_CUSTOM_ART_C})
     zephyr_library_sources(widgets/peripheral_status.c)
