@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import re
+import sys
 import struct
 import zlib
 from pathlib import Path
@@ -205,6 +206,18 @@ def c_array(values, indent="        "):
 
 def convert_image(path):
     pixels = png_to_luma(path)
+    source_height = len(pixels)
+    source_width = len(pixels[0])
+    if (source_width, source_height) not in (
+        (TARGET_WIDTH, TARGET_HEIGHT),
+        (TARGET_HEIGHT, TARGET_WIDTH),
+    ):
+        print(
+            f"warning: {path} is {source_width}x{source_height}; best results need "
+            f"{TARGET_HEIGHT}x{TARGET_WIDTH} portrait or {TARGET_WIDTH}x{TARGET_HEIGHT} landscape",
+            file=sys.stderr,
+        )
+
     if len(pixels) > len(pixels[0]):
         pixels = rotate_clockwise(pixels)
     pixels = resize_cover_nearest(pixels, TARGET_WIDTH, TARGET_HEIGHT)
